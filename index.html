@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Formulario para Conhecer Cliente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        option{
+            background: #e2e2e2;
+            color: #000000;
+            font-weight: 500;
+            font-size: 16px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/processar-formulario" method="post">
+        <h2>Informações de Contato</h2>
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Endereço de e-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefone">Número de telefone:</label>
+        <input type="tel" id="telefone" name="telefone">
+
+        <label for="endereco">Endereço físico:</label>
+        <input type="text" id="endereco" name="endereco">
+
+        <h2>Informações da Empresa</h2>
+        <label for="nomeEmpresa">Nome da empresa:</label>
+        <input type="text" id="nomeEmpresa" name="nomeEmpresa">
+
+        <label for="setor">Setor de atuação:</label>
+        <input type="text" id="setor" name="setor">
+
+        <label for="valor">Qual é a missão e valores da empresa:</label>
+        <input type="text" id="valor" name="valor">
+
+        <label for="objetivo">Qual é o Objetivo da empresa</label>
+        <input type="text" id="objetivo" name="objetivos">
+
+        <label for="cores-slogan">Possui cores ou Slogan que seja marca registrada da empresa:</label>
+        <input type="text" id="cores-slogan" name="cores-slogan">
+
+
+        <label for="">Possui CNPJ ?</label>
+        <input type="cnpj" id="cnpj" name="cnpj">
+
+        <label for="localizacao">Localização da sede:</label>
+        <input type="text" id="localizacao" name="localizacao">
+
+        <label for="numFuncionarios">Número de funcionários:</label>
+        <input type="number" id="numFuncionarios" name="numFuncionarios">
+
+        <h2>Propósito do Consulta</h2>
+        <label for="motivoContato">Motivo do contato:</label>
+        <select id="motivoContato" name="motivoContato">
+            <option value="perguntas">Perguntas Gerais</option>
+            <option value="suporte">Suporte ao Cliente</option>
+            <option value="parcerias">Parcerias</option>
+            <!-- Adicione mais opções conforme necessário -->
+        </select>
+
+        <label for="descricao">Descrição detalhada:</label>
+        <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+        <h2>Preferências de Contato</h2>
+        <label for="melhorHorario">Melhor horário para contato:</label>
+        <input type="text" id="melhorHorario" name="melhorHorario">
+
+        <label for="preferenciaContato">Preferência de contato:</label>
+        <select id="preferenciaContato" name="preferenciaContato">
+            <option value="email">E-mail</option>
+            <option value="telefone">Telefone</option>
+            <option value="formulario">Formulário Online</option>
+        
+        </select>
+
+        <h2>Feedback sobre o Site</h2>
+        <label for="facilidadeNavegacao">Facilidade de navegação:</label>
+        <input type="text" id="facilidadeNavegacao" name="facilidadeNavegacao">
+
+        <label for="tipodados">Qual tipos de dados deseja :</label>
+        <input type="text" id="tipodados" name="tipodados">
+
+
+        <h2>Qual tipo de site deseja ? </h2>
+        <label for="escolhamodelos">Modelos:</label>
+        <select id="escolhamodelos" name="escolhamodelos">
+            <option value="modelos">Lista de modelos</option>
+            <option value="modelo1">Sites de Busca</option>
+            <option value="modelo2">Redes Sociais</option>
+            <option value="modelo3">Blogs</option>
+            <option value="modelo4">Educação Online</option>
+            <option value="modelo5">Notícias e Mídia<option>
+            <option value="modelo6">Comércio Eletrônico</option>
+            <option value="modelo7">Bancos e Finanças</option>
+            <option value="modelo8">Governo</option>
+            <option value="modelo9">Saúde e Bem-Estar</option>
+            <option value="modelo10">Fóruns e Comunidades</option>
+            <option value="modelo11">Jogos Online</option>
+            <option value="modelo12">Bancos de Dados e Enciclopédias</option>
+            <option value="modelo13">Blogs de Viagem</option>
+            <option value="modelo14">Imobiliárias</option>
+            <option value="modelo15">Portfólios Profissionais</option>
+            <option value="modelo16">Sites de Música e Entretenimento</option>
+            <option value="modelo117">Wikis</option>
+            <input type="submit" value="Enviar">
+        </select>
+        
+        <h2>Qual tipo de funcionalidade deseja  ? </h2>
+        <label for="func">Funcionalidade para o site.</label>
+        <input type="text" id="func" name="func" required>
+
+        <h2>Informe a Quantidade de Páginas que deseja :</h2>
+        <label for="qtpaginas">Escola a quantidades de páginas :</label>
+        <select name="qtpaginas" id="qtpaginas">
+            <option value="op">Selecione</option>
+            <option value="op1">1</option>
+            <option value="op2">2</option>
+            <option value="op3">3</option>
+            <option value="op4">4</option>
+            <option value="05">5</option>
+            <option value="06">Outras</option>
+            <input type="submit" value="Enviar">
+        </<select>
+        
+        
+        
+        <label for="conteudoUtil">Conteúdo útil:</label>
+        <input type="text" id="conteudoUtil" name="conteudoUtil">
+
+        <label for="sugestoesMelhoria">Sugestões de melhoria:</label>
+        <textarea id="sugestoesMelhoria" name="sugestoesMelhoria" rows="4"></textarea>
+
+        <h2>Marketing e Comunicação</h2>
+        <label for="consentimentoMarketing">Consentimento para receber informações de marketing:</label>
+        <label style="display: flex; text-align: center; width: 50%;">
+            <input type="checkbox" name="som" value="sim"> Sim
+            <input type="checkbox" name="som" value="nao"> Não
+        </label>
+        <input type="submit" value="Enviar">
+
+        <label for="preferenciasComunicacao">Preferências de comunicação:</label>
+        <input type="text" id="preferenciasComunicacao" name="preferenciasComunicacao">
+
+        <h2>Informações Adicionais</h2>
+        <label for="comoConheceu">Tem alguma informação que  deseja transmitir ?</label>
+        <input type="text" id="comoConheceu" name="comoConheceu">
+
+        <label for="perguntasAdicionais">Perguntas adicionais:</label>
+        <textarea id="perguntasAdicionais" name="perguntasAdicionais" rows="4"></textarea>
+
+        <h2>Anexos e Uploads</h2>
+        <label for="anexo">Anexar documentos relevantes (se aplicável):</label>
+        <input type="file" id="anexo" name="anexo">
+
+        <input type="submit" value="Enviar Mensagem">
+    </form>
+
+</body>
+</html>
